@@ -8,12 +8,14 @@ namespace S02.EFCoreDbFirstMsSql
     {
         static void Main(string[] args)
         {
+
             using (var db = new RicoSqlServerDbContext())
             {
-                if (db.Menu.Count(a => a.Name == "ricolee" && !a.IsDeleted.Value) <= 0)
+                var name = "ricolee_dbfirst_sqlserver";
+                if (db.Menu.Count(a => a.Name == name && !a.IsDeleted.Value) <= 0)
                 {
                     var menu = new Menu();
-                    menu.Name = "ricolee";
+                    menu.Name = name;
                     menu.Url = "www.baidu.com";
                     menu.Icon = "hehe";
                     menu.CreateOn = DateTime.Now;
@@ -24,7 +26,7 @@ namespace S02.EFCoreDbFirstMsSql
                 }
                 else
                 {
-                    var menu = db.Menu.Single(a => a.Name == "ricolee" && !a.IsDeleted.Value);
+                    var menu = db.Menu.Single(a => a.Name == name && !a.IsDeleted.Value);
                     if (menu != null)
                     {
                         menu.Icon = "default-btn";

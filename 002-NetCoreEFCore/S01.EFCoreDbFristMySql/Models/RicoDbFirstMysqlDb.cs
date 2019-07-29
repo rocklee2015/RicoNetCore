@@ -2,15 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace S01.EFCoreDbFirstMySql.Models
+namespace S01.EFCoreDbFristMySql.Models
 {
-    public partial class RicoTestDbContext : DbContext
+    public partial class RicoDbFirstMysqlDb : DbContext
     {
-        public RicoTestDbContext()
+        public RicoDbFirstMysqlDb()
         {
         }
 
-        public RicoTestDbContext(DbContextOptions<RicoTestDbContext> options)
+        public RicoDbFirstMysqlDb(DbContextOptions<RicoDbFirstMysqlDb> options)
             : base(options)
         {
         }
@@ -40,7 +40,9 @@ namespace S01.EFCoreDbFirstMySql.Models
 
                 entity.Property(e => e.Icon).HasColumnType("varchar(255)");
 
-                entity.Property(e => e.IsDeleted).HasColumnType("bit(1)");
+                entity.Property(e => e.IsDeleted)
+                    .HasColumnType("tinyint(1)")
+                    .HasDefaultValueSql("'0'");
 
                 entity.Property(e => e.ModifyBy).HasColumnType("int(11)");
 

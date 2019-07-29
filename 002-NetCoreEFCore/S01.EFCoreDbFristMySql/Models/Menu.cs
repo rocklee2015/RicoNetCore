@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace S01.EFCoreDbFirstMySql.Models
+namespace S01.EFCoreDbFristMySql.Models
 {
     public partial class Menu
     {
@@ -14,6 +14,6 @@ namespace S01.EFCoreDbFirstMySql.Models
         public int CreateBy { get; set; }
         public DateTime ModifyOn { get; set; }
         public int ModifyBy { get; set; }
-        public bool? IsDeleted { get; set; }
+        public sbyte? IsDeleted { get; set; }
     }
 }

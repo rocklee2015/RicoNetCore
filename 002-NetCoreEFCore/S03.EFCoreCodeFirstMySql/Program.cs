@@ -10,7 +10,7 @@ namespace S03.EFCoreCodeFirstMySql
         {
             using (var db = new RicoCodeFristDb())
             {
-                var name = "ricolee_codefirst";
+                var name = "ricolee_codefirst_mysql";
                 if (db.Menus.Count(a => a.Name == name && !a.IsDeleted.Value) <= 0)
                 {
                     var menu = new Menu();
@@ -33,7 +33,6 @@ namespace S03.EFCoreCodeFirstMySql
                         menu.Icon = "default-btn";
                         menu.ModifyBy = 110;
                         menu.ModifyOn = DateTime.Now;
-                        menu.IsDeleted = true;
                         db.Menus.Update(menu);
                         db.SaveChanges();
                     }
@@ -41,7 +40,9 @@ namespace S03.EFCoreCodeFirstMySql
                 }
 
             }
-            Console.WriteLine("Hello World!");
+            
+         
+            Console.ReadKey();
         }
     }
 }

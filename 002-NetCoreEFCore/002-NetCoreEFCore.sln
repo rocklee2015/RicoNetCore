@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S01.EFCoreDbFirstMySql", "S01.EFCoreMySqlDbFirst\S01.EFCoreDbFirstMySql.csproj", "{3DB05096-035C-4292-A2AC-AB93282B4904}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S02.EFCoreDbFirstSqlServer", "S02.EFCoreDbFirstMsSql\S02.EFCoreDbFirstSqlServer.csproj", "{8E6B23A5-7850-4BAD-9F8D-FDE4E5DA77B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S03.EFCoreCodeFirstMySql", "S03.EFCoreCodeFirstMySql\S03.EFCoreCodeFirstMySql.csproj", "{8273F701-F845-4599-B865-46B98443B6F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S01.EFCoreDbFristMySql", "S01.EFCoreDbFristMySql\S01.EFCoreDbFristMySql.csproj", "{904950B9-6833-4313-B9B0-EC40AF8B5883}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S01.EFCoreDbFirstMySqlWithMysqlData", "S01.EFCoreDbFirstMySqlWithMysqlData\S01.EFCoreDbFirstMySqlWithMysqlData.csproj", "{C502DE4E-3DC0-4B71-B314-370186406064}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3DB05096-035C-4292-A2AC-AB93282B4904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DB05096-035C-4292-A2AC-AB93282B4904}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DB05096-035C-4292-A2AC-AB93282B4904}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DB05096-035C-4292-A2AC-AB93282B4904}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E6B23A5-7850-4BAD-9F8D-FDE4E5DA77B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E6B23A5-7850-4BAD-9F8D-FDE4E5DA77B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E6B23A5-7850-4BAD-9F8D-FDE4E5DA77B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +25,14 @@ Global
 		{8273F701-F845-4599-B865-46B98443B6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8273F701-F845-4599-B865-46B98443B6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8273F701-F845-4599-B865-46B98443B6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{904950B9-6833-4313-B9B0-EC40AF8B5883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904950B9-6833-4313-B9B0-EC40AF8B5883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904950B9-6833-4313-B9B0-EC40AF8B5883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904950B9-6833-4313-B9B0-EC40AF8B5883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C502DE4E-3DC0-4B71-B314-370186406064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C502DE4E-3DC0-4B71-B314-370186406064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C502DE4E-3DC0-4B71-B314-370186406064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C502DE4E-3DC0-4B71-B314-370186406064}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
