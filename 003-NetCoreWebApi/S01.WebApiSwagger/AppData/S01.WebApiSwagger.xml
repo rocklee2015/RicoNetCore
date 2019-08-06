@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>S01.WebApiSwagger</name>
+    </assembly>
+    <members>
+        <member name="T:S01.WebApiSwagger.Areas.Product.Controllers.GoodsController">
+            <summary>
+            商品列表
+            </summary>
+        </member>
+        <member name="M:S01.WebApiSwagger.Areas.Product.Controllers.GoodsController.Get">
+            <summary>
+            集合获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:S01.WebApiSwagger.Controllers.ValuesController">
+            <summary>
+            Values Demo
+            </summary>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.ValuesController.Get">
+            <summary>
+            集合获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            根据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:S01.WebApiSwagger.Extensions.ApiDescriptionExtension">
+            <summary>
+            API描述器扩展
+            </summary>
+        </member>
+        <member name="M:S01.WebApiSwagger.Extensions.ApiDescriptionExtension.GetAreaName(Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescription)">
+            <summary>
+            获取区域名称
+            </summary>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
