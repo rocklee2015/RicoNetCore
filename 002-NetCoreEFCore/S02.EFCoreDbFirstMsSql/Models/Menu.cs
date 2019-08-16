@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace S02.EFCoreDbFirstMsSql.Models
+namespace S02.EFCoreDbFirstSqlServer.Models
 {
     public partial class Menu
     {
