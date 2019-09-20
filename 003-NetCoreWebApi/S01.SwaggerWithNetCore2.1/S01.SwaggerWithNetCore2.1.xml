@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>S01.SwaggerWithNetCore2.1</name>
+    </assembly>
+    <members>
+        <member name="T:S01.WebApiSwagger.Controllers.UserController">
+            <summary>
+            用户管理中心
+            </summary>
+        </member>
+        <member name="P:S01.WebApiSwagger.Controllers.UserController.Users">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.UserController.Get">
+            <summary>
+            集合获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            获取用户
+            </summary>
+            <param name="id">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.UserController.Post(S00.NetCoreModels.User.UserInput)">
+            <summary>
+            用户提交
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.UserController.Post(System.String,System.Int32,System.String)">
+            <summary>
+            用户提交
+            </summary>
+            <param name="UserName"></param>
+            <param name="Age"></param>
+            <param name="Mobile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.UserController.SumbitSchool(S00.NetCoreModels.User.School)">
+            <summary>
+            用户提交
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:S01.WebApiSwagger.Controllers.UserController.#cctor">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

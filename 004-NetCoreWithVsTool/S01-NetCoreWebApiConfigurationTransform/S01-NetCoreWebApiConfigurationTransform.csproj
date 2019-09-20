@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>S01_NetCoreWebApiConfigurationTransform</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+  <Target Name="web_config_AfterBuild" AfterTargets="AfterBuild" Condition="Exists('web.$(Configuration).config')" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <TransformXml Source="web.config" Destination="$(OutputPath)web.config" Transform="web.$(Configuration).config" />
+  </Target>
+</Project>

@@ -10,13 +10,12 @@ namespace S01.WebApiSwagger.Areas.Product.Controllers
     /// <summary>
     /// 商品列表
     /// </summary>
-    [Area("Product")]
-    [Route("product/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class GoodsController : ControllerBase
     {
         /// <summary>
-        /// 集合获取
+        /// 获取商品列表
         /// </summary>
         /// <returns></returns>
         [HttpGet]

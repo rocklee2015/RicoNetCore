@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\02-github\rocklee2015\RicoNetCore\003-NetCoreWebApi\S00.NetCoreModels\S00.NetCoreModels.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

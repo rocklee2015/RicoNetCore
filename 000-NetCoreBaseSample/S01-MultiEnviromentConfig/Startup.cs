@@ -1,39 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using S01.WebApiSwagger.Extensions;
-using Swashbuckle.AspNetCore.Swagger;
 
-namespace S01.WebApiSwagger
+namespace S01_MultiEnviromentConfig
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            services.AddSwaggerGen(c =>
-            {
-                //c.OrderActionsBy(apiDesc => apiDesc.GetAreaName());
-                c.SwaggerDoc("v1.0", new Info { Title = "Ricolee Demo API", Version = "1.0" });
-                c.IncludeXmlComments(System.IO.Path.Combine(System.AppContext.BaseDirectory, "AppData", "S01.WebApiSwagger.xml"));
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,14 +32,24 @@ namespace S01.WebApiSwagger
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+            }
+            if (env.IsProduction() || env.IsStaging() || env.IsEnvironment("Staging_2"))
+            {
+                app.UseExceptionHandler("/Error");
             }
 
-            app.UseMvc();
+            //var builder = new ConfigurationBuilder()
+            // .SetBasePath(Directory.GetCurrentDirectory())
+            // .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true, true);
+            //Configuration = builder.Build();
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            app.Run(async (context) =>
             {
-                c.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Ricolee Demo API (V 1.0)");
+
+                var connectionString = Configuration["ConnectionStrings:RicoDbContext"];
+
+                await context.Response.WriteAsync(connectionString);
             });
         }
     }

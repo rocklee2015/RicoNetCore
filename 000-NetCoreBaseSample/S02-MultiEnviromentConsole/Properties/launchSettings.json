@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "S02-MultiEnviromentConsole": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
