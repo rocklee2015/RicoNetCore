@@ -1,4 +1,5 @@
 ﻿using S02.EFCoreDbFirstMsSql.Models;
+using S02.EFCoreDbFirstSqlServer.Models;
 using System;
 using System.Linq;
 
@@ -19,6 +20,7 @@ namespace S02.EFCoreDbFirstMsSql
                     menu.Url = "www.baidu.com";
                     menu.Icon = "hehe";
                     menu.CreateOn = DateTime.Now;
+                    menu.IsDeleted = true;
                     db.Menu.Add(menu);
                     db.SaveChanges();
 

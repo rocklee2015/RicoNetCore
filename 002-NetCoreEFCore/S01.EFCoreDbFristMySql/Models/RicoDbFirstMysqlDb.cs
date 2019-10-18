@@ -22,7 +22,7 @@ namespace S01.EFCoreDbFristMySql.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySql("Server=127.0.0.1;User Id=root;Password=1qaz~xsw2;Database=ricotest;TreatTinyAsBoolean=true");
+                optionsBuilder.UseMySql("Server=127.0.0.1;User Id=root;Password=1qaz~xsw2;Database=rico_dbfirst_mysql;TreatTinyAsBoolean=true");
             }
         }
 
@@ -40,9 +40,12 @@ namespace S01.EFCoreDbFristMySql.Models
 
                 entity.Property(e => e.Icon).HasColumnType("varchar(255)");
 
-                entity.Property(e => e.IsDeleted)
-                    .HasColumnType("tinyint(1)")
-                    .HasDefaultValueSql("'0'");
+                entity.Property(e => e.IsA)
+                    .IsRequired()
+                    .HasColumnType("bit(1)")
+                    .HasDefaultValueSql("'b\\'0\\''");
+
+                entity.Property(e => e.IsDeleted).HasColumnType("bit(1)");
 
                 entity.Property(e => e.ModifyBy).HasColumnType("int(11)");
 

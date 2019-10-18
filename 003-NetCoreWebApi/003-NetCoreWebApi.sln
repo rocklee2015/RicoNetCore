@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S01.SwaggerWithNetCore2.1",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S00.NetCoreModels", "S00.NetCoreModels\S00.NetCoreModels.csproj", "{3EEFB31B-AF02-43B8-AFF8-203857CBFC04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S04.WebApiJwtBearer", "S04.WebApiJwtBearer\S04.WebApiJwtBearer.csproj", "{F47BE2DD-34B4-42AB-BA88-C79F43C918BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3EEFB31B-AF02-43B8-AFF8-203857CBFC04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EEFB31B-AF02-43B8-AFF8-203857CBFC04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EEFB31B-AF02-43B8-AFF8-203857CBFC04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47BE2DD-34B4-42AB-BA88-C79F43C918BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47BE2DD-34B4-42AB-BA88-C79F43C918BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47BE2DD-34B4-42AB-BA88-C79F43C918BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47BE2DD-34B4-42AB-BA88-C79F43C918BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
