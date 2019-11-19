@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace S03_AspNetCoreWebConfig
+namespace S05.WebApiEnviromentSample
 {
     public class Program
     {

@@ -23,6 +23,12 @@ namespace S01.WebApiSwagger.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        [HttpGet("TEST")]
+        public ActionResult<string> TEST()
+        {
+            return "TEST";
+        }
+
         /// <summary>
         /// 根据ID获取Value
         /// </summary>

@@ -47,9 +47,21 @@ namespace S01_MultiEnviromentConfig
             app.Run(async (context) =>
             {
 
+                context.Response.ContentType = "text/plain; charset=utf-8";
+
+                await context.Response.WriteAsync($"进程内环境变量：env.EnvironmentName={env.EnvironmentName}\n");
+
+                var myEnvironmentValue = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", EnvironmentVariableTarget.Machine);
+
+                await context.Response.WriteAsync($"操作系统环境变量 ASPNETCORE_ENVIRONMENT={myEnvironmentValue ?? "没有找到"}\n");
+
                 var connectionString = Configuration["ConnectionStrings:RicoDbContext"];
 
-                await context.Response.WriteAsync(connectionString);
+                await context.Response.WriteAsync($"数据库库连接字符串：{connectionString}\n");
+
+                var appId = Configuration["AppId"];
+
+                await context.Response.WriteAsync($"appId={appId ?? "没找到"}\n");
             });
         }
     }

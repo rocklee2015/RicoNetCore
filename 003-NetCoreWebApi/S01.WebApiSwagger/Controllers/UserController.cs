@@ -41,6 +41,12 @@ namespace S01.WebApiSwagger.Controllers
             return Users;
         }
 
+        [HttpGet("TEST")]
+        public ActionResult<string> Test()
+        {
+            return "TEST";
+        }
+
         /// <summary>
         /// 根据ID获取用户
         /// </summary>

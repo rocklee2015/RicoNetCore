@@ -4,14 +4,14 @@
         <name>S01.WebApiSwagger</name>
     </assembly>
     <members>
-        <member name="T:S01.WebApiSwagger.Areas.Product.Controllers.GoodsController">
+        <member name="T:S01.WebApiSwagger.Controllers.EnvController">
             <summary>
-            商品列表
+            
             </summary>
         </member>
-        <member name="M:S01.WebApiSwagger.Areas.Product.Controllers.GoodsController.Get">
+        <member name="M:S01.WebApiSwagger.Controllers.EnvController.Get">
             <summary>
-            获取商品列表
+            
             </summary>
             <returns></returns>
         </member>
@@ -86,6 +86,17 @@
             删除
             </summary>
             <param name="id"></param>
+        </member>
+        <member name="T:S01.WebApiSwagger.Areas.Product.Controllers.GoodsController">
+            <summary>
+            商品列表
+            </summary>
+        </member>
+        <member name="M:S01.WebApiSwagger.Areas.Product.Controllers.GoodsController.Get">
+            <summary>
+            获取商品列表
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:S01.WebApiSwagger.Extensions.ApiDescriptionExtension">
             <summary>

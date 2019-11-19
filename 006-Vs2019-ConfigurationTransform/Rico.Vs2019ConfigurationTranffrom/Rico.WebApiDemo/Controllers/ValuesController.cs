@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace S03_AspNetCoreWebConfig.Controllers
+namespace Rico.WebApiDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
