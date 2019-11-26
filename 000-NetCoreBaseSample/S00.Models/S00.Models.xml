@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>S00.Models</name>
+    </assembly>
+    <members>
+        <member name="T:S00.Models.UserInput">
+            <summary>
+            用户输入表单
+            </summary>
+        </member>
+        <member name="P:S00.Models.UserInput.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:S00.Models.UserInput.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:S00.Models.UserInput.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="T:S00.Models.UserOutput">
+            <summary>
+            用户返回结果
+            </summary>
+        </member>
+        <member name="P:S00.Models.UserOutput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:S00.Models.UserOutput.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+    </members>
+</doc>

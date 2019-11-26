@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>S04.SwaggerSample.ApiV2_2</name>
+    </assembly>
+    <members>
+        <member name="T:S04.SwaggerSample.ApiV2_2.Controllers.UserController">
+            <summary>
+            用户管理中心
+            </summary>
+        </member>
+        <member name="P:S04.SwaggerSample.ApiV2_2.Controllers.UserController.Users">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="M:S04.SwaggerSample.ApiV2_2.Controllers.UserController.Get">
+            <summary>
+            集合获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:S04.SwaggerSample.ApiV2_2.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            获取用户
+            </summary>
+            <param name="id">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:S04.SwaggerSample.ApiV2_2.Controllers.UserController.Post(S00.Models.UserInput)">
+            <summary>
+            用户提交
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:S04.SwaggerSample.ApiV2_2.Controllers.UserController.Post(System.String,System.Int32,System.String)">
+            <summary>
+            用户提交
+            </summary>
+            <param name="UserName"></param>
+            <param name="Age"></param>
+            <param name="Mobile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:S04.SwaggerSample.ApiV2_2.Controllers.UserController.SumbitSchool(S00.Models.School)">
+            <summary>
+            用户提交
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:S04.SwaggerSample.ApiV2_2.Controllers.UserController.#cctor">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
