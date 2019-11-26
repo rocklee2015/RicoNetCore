@@ -39,29 +39,21 @@ namespace S01_MultiEnviromentConfig
                 app.UseExceptionHandler("/Error");
             }
 
-            //var builder = new ConfigurationBuilder()
-            // .SetBasePath(Directory.GetCurrentDirectory())
-            // .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true, true);
-            //Configuration = builder.Build();
-
             app.Run(async (context) =>
             {
-
                 context.Response.ContentType = "text/plain; charset=utf-8";
 
-                await context.Response.WriteAsync($"进程内环境变量：env.EnvironmentName={env.EnvironmentName}\n");
+                await context.Response.WriteAsync($"env.EnvironmentName={env.EnvironmentName}\n");
 
-                var myEnvironmentValue = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", EnvironmentVariableTarget.Machine);
+                await context.Response.WriteAsync($"进程内 ASPNETCORE_ENVIRONMENT={Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", EnvironmentVariableTarget.Process) ?? "null"}\n");
 
-                await context.Response.WriteAsync($"操作系统环境变量 ASPNETCORE_ENVIRONMENT={myEnvironmentValue ?? "没有找到"}\n");
+                await context.Response.WriteAsync($"用户 ASPNETCORE_ENVIRONMENT={Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", EnvironmentVariableTarget.User) ?? "null"}\n");
 
-                var connectionString = Configuration["ConnectionStrings:RicoDbContext"];
+                await context.Response.WriteAsync($"全局 ASPNETCORE_ENVIRONMENT={Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", EnvironmentVariableTarget.Machine) ?? "null"}\n");
 
-                await context.Response.WriteAsync($"数据库库连接字符串：{connectionString}\n");
+                await context.Response.WriteAsync($"数据库库连接字符串：{Configuration["ConnectionStrings:RicoDbContext"]}\n");
 
-                var appId = Configuration["AppId"];
-
-                await context.Response.WriteAsync($"appId={appId ?? "没找到"}\n");
+                await context.Response.WriteAsync($"appId={Configuration["AppId"] ?? "null"}\n");
             });
         }
     }

@@ -10,18 +10,17 @@ namespace CustomersAPIServices.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public string Get()
         {
-            return new string[] { "rocklee", "ricolee" };
+            return $"API_Customer:{DateTime.Now.ToString()}  { Environment.MachineName + " OS:" + Environment.OSVersion.VersionString}";
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("health")]
+        public IActionResult Heathle()
         {
-            return "rocklee_" + id;
+            return Ok();
         }
+
     }
 }

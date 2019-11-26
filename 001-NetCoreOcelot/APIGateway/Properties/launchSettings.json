@@ -3,7 +3,7 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:6000",
+      "applicationUrl": "http://192.168.3.38:6000",
       "sslPort": 0
     }
   },
@@ -18,7 +18,7 @@
     "APIGateway": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:6000",
+      "applicationUrl": "http://192.168.3.38:6000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

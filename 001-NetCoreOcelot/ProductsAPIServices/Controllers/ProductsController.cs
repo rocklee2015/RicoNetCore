@@ -10,18 +10,16 @@ namespace ProductsAPIServices.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public string Get()
         {
-            return new string[] { "Huawei", "Xiaomi" };
+            return $"API_Product:{DateTime.Now.ToString()}  { Environment.MachineName + " OS:" + Environment.OSVersion.VersionString}";
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("health")]
+        public IActionResult Heathle()
         {
-            return "Huawei_" + id;
+            return Ok();
         }
     }
 }
