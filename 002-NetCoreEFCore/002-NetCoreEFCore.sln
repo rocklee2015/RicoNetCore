@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S02.EFCoreDbFirstSqlServer", "S02.EFCoreDbFirstMsSql\S02.EFCoreDbFirstSqlServer.csproj", "{8E6B23A5-7850-4BAD-9F8D-FDE4E5DA77B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S02.EFCoreDbFirstSqlServer", "S02.EFCoreDbFirstMsSql\S02.EFCoreDbFirstSqlServer.csproj", "{8E6B23A5-7850-4BAD-9F8D-FDE4E5DA77B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S03.EFCoreCodeFirstMySql", "S03.EFCoreCodeFirstMySql\S03.EFCoreCodeFirstMySql.csproj", "{8273F701-F845-4599-B865-46B98443B6F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S03.EFCoreCodeFirstMySql", "S03.EFCoreCodeFirstMySql\S03.EFCoreCodeFirstMySql.csproj", "{8273F701-F845-4599-B865-46B98443B6F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S01.EFCoreDbFristMySql", "S01.EFCoreDbFristMySql\S01.EFCoreDbFristMySql.csproj", "{904950B9-6833-4313-B9B0-EC40AF8B5883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S01.EFCoreDbFristMySql", "S01.EFCoreDbFristMySql\S01.EFCoreDbFristMySql.csproj", "{904950B9-6833-4313-B9B0-EC40AF8B5883}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S01.EFCoreDbFirstMySqlWithMysqlData", "S01.EFCoreDbFirstMySqlWithMysqlData\S01.EFCoreDbFirstMySqlWithMysqlData.csproj", "{C502DE4E-3DC0-4B71-B314-370186406064}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S01.EFCoreDbFirstMySqlWithMysqlData", "S01.EFCoreDbFirstMySqlWithMysqlData\S01.EFCoreDbFirstMySqlWithMysqlData.csproj", "{C502DE4E-3DC0-4B71-B314-370186406064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S04.EFCodeCodeFirstSqlServer", "S04.EFCodeCodeFirstSqlServer\S04.EFCodeCodeFirstSqlServer.csproj", "{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C502DE4E-3DC0-4B71-B314-370186406064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C502DE4E-3DC0-4B71-B314-370186406064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C502DE4E-3DC0-4B71-B314-370186406064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

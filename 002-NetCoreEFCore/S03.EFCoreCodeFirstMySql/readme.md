@@ -23,6 +23,8 @@ EF Core 2.0 NuGet命令
 
 Get-Help about_EntityFrameworkCore 获取EF Core命令帮助
 
+Enable-Migrations
+
 添加一个迁移数据库 迁移的名称 目录（及其子命名空间）路径是相对于项目目录。 默认值为"Migrations"。
 Add-Migration -Name <String> -OutputDir <String>	
 Add-Migration InitialCreate 第一次执行初始化用这个

@@ -9,8 +9,8 @@ using S03.EFCoreCodeFirstMySql.Model;
 namespace S03.EFCoreCodeFirstMySql.Migrations
 {
     [DbContext(typeof(RicoCodeFristDb))]
-    [Migration("20190726095137_Initial")]
-    partial class Initial
+    [Migration("20191128024002_AddUserKey")]
+    partial class AddUserKey
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,6 +45,18 @@ namespace S03.EFCoreCodeFirstMySql.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Menu");
+                });
+
+            modelBuilder.Entity("S03.EFCoreCodeFirstMySql.Model.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("User");
                 });
 #pragma warning restore 612, 618
         }
