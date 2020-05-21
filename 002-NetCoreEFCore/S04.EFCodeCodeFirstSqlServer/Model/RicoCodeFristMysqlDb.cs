@@ -25,9 +25,9 @@ namespace S04.EFCodeCodeFirstSqlServer.Model
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=rico_efcore_source;User ID=sa;Password=1qaz~xsw2;");
+            //optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=rico_efcore_source;User ID=sa;Password=1qaz~xsw2;");
+            optionsBuilder.UseSqlServer("Server=.;Database=rico_efcore_source;User Id=sa;Password=1qaz~xsw2;MultipleActiveResultSets=true;");
 
-      
             base.OnConfiguring(optionsBuilder);
         }
     }

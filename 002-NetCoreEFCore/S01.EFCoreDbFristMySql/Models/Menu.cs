@@ -16,5 +16,6 @@ namespace S01.EFCoreDbFristMySql.Models
         public int ModifyBy { get; set; }
         public bool IsDeleted { get; set; }
         public bool? IsA { get; set; }
+        public int Status { get; set; }
     }
 }

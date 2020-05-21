@@ -57,6 +57,8 @@ namespace S01.EFCoreDbFristMySql.Models
 
                 entity.Property(e => e.Parent).HasColumnType("int(11)");
 
+                entity.Property(e => e.Status).HasColumnType("int(11)");
+
                 entity.Property(e => e.Url)
                     .IsRequired()
                     .HasColumnType("varchar(500)");

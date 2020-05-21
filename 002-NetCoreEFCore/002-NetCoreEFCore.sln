@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S01.EFCoreDbFristMySql", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S01.EFCoreDbFirstMySqlWithMysqlData", "S01.EFCoreDbFirstMySqlWithMysqlData\S01.EFCoreDbFirstMySqlWithMysqlData.csproj", "{C502DE4E-3DC0-4B71-B314-370186406064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S04.EFCodeCodeFirstSqlServer", "S04.EFCodeCodeFirstSqlServer\S04.EFCodeCodeFirstSqlServer.csproj", "{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S04.EFCodeCodeFirstSqlServer", "S04.EFCodeCodeFirstSqlServer\S04.EFCodeCodeFirstSqlServer.csproj", "{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S05.EF6_X.CodeFirstSqlServer", "S05.EF6_X.CodeFirstSqlServer\S05.EF6_X.CodeFirstSqlServer.csproj", "{08C13E4F-0D62-4F08-879B-B4D13ACAAE62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3397E2B0-B07C-40B2-8BA7-5E6ECF6D0CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C13E4F-0D62-4F08-879B-B4D13ACAAE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C13E4F-0D62-4F08-879B-B4D13ACAAE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C13E4F-0D62-4F08-879B-B4D13ACAAE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C13E4F-0D62-4F08-879B-B4D13ACAAE62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
