@@ -5,6 +5,7 @@ using S00_Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace S02_ReadAppsettingConfig
 {
@@ -54,12 +55,16 @@ namespace S02_ReadAppsettingConfig
             var appid = Configuration.GetValue<int>("AppId", 12345);
             var includeScope = Configuration.GetValue<bool>("Logging:IncludeScopes", false);
             var logLevel = Configuration.GetValue<string>("Logging:LogLevel:Default", "Debug");
-            var roleName = Configuration.GetValue<string>("RoleNames:0:Name", "adminDefault");
+            var roleName = Configuration.GetValue<string>("RoleNames:0:Name", "adminDefault"); 
+            var roleNames = Configuration.GetValue<List<string>>("CORS:0");
+            var corsOption = Configuration.GetValue<CORSOption>("CORS");
+            //var corsOption1 = Configuration.Get<CORSOption>("CORS");
             Console.WriteLine("通过GetValue()读取：");
             Console.WriteLine(appid);
             Console.WriteLine(includeScope);
             Console.WriteLine(logLevel);
             Console.WriteLine(roleName);
+            Console.WriteLine(roleNames);
         }
 
         static void ReadJsonByOption()
@@ -78,6 +83,9 @@ namespace S02_ReadAppsettingConfig
             services.Configure<LogLevelOptions>(Configuration.GetSection("Logging:LogLevel"));
             services.Configure<List<RoleName>>(Configuration.GetSection("RoleNames"));
 
+            services.Configure<CORSOption>(Configuration.GetSection("CORS"));
+
+
             var serviceProvider = services.BuildServiceProvider();
 
             Console.WriteLine("通过Option读取：");
@@ -93,6 +101,9 @@ namespace S02_ReadAppsettingConfig
 
             var roleNames = serviceProvider.GetService<IOptions<List<RoleName>>>();
             Console.WriteLine(roleNames.Value[0].Name);
+
+            var corsOption = serviceProvider.GetService<IOptions<CORSOption>>();
+            Console.WriteLine(string.Join(",",corsOption.Value.Allow));
         }
 
         static void ReadFromMemory()

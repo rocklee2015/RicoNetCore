@@ -17,4 +17,8 @@ namespace S02_ReadAppsettingConfig
     {
         public string Name { get; set; }
     }
+    public class CORSOption
+    {
+        public List<string> Allow { get; set; }
+    }
 }
